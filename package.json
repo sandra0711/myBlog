@@ -1,0 +1,41 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "production": "cross-env NODE_ENV=production node app.js",
+    "start": "node app",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandra0711/myBlog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandra0711/myBlog/issues"
+  },
+  "homepage": "https://github.com/sandra0711/myBlog#readme",
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "b": "^2.0.1",
+    "bcrypt": "^5.0.1",
+    "cross-env": "^7.0.3",
+    "crypt": "^0.0.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "hbs": "^4.1.2",
+    "mongoose": "^5.13.3",
+    "path": "^0.12.7",
+    "session-file-store": "^1.5.0"
+  }
+}
