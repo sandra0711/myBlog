@@ -6,7 +6,7 @@
   "scripts": {
     "production": "cross-env NODE_ENV=production node app.js",
     "start": "node app",
-    "dev": "nodemon app.js",
+    "dev": "nodemon --ignore ./sessions/ app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

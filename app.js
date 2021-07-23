@@ -18,7 +18,7 @@ hbs.registerPartials(path.join(__dirname, 'src', '/views', '/partials'));
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'src', 'views'));
-app.set('session cookie name', 'sid');
+// app.set('session cookie name', 'sid');
 
 app.use(session({
   name: 'session cookie name',
@@ -34,6 +34,11 @@ app.use(session({
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use((req, res, next) => {
+  res.locals.useremail = req.session?.user?.email;
+  next();
+});
 
 app.use('/', indexRoute);
 app.use('/users', usersRoute);

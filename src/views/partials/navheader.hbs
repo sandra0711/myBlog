@@ -18,10 +18,19 @@
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         <ul class="navbar-nav mp-auto mb-2 mb-md-0">
+          {{#if useremail}}
+            <li class="nav-item">
+              <a class="nav-link" href="/users/signout">Sign Out</a>
+            </li> <li class="nav-item">
+          {{else}}
           <li class="nav-item">
-            <a class="nav-link" href="users/signin">Sign In</a>
+            <a class="nav-link" href="/users/signin">Sign In</a>
           </li> <li class="nav-item">
-            <a class="nav-link" href="users/signup">Sign Up</a>
+            <a class="nav-link" href="/users/signup">Sign Up</a>
+          </li>
+          {{/if}}
+          <li class="nav-item">
+           {{user.email}}
           </li>
         </ul>
       </div>
